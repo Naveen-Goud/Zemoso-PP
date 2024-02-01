@@ -9,12 +9,12 @@ import { getUserComments, getUserDetails } from "../../../services";
 
 const UserDetails = () => {
   const [userData, setUserData] = useState<UserBody>();
-  const [userComments, setUserComments] = useState([]);
+  const [userComments, setUserComments] = useState<UserComments[]>([]);
   useEffect(() => { 
        getUserDetails(1)
-      .then((res) => (setUserData(res), console.log(res)));
+      .then((res) => (setUserData(res)));
        getUserComments(1)
-      .then((res) => (setUserComments(res.data), console.log(res.data)));
+      .then((res) => (setUserComments(res.data)));
   }, []);
 
   return (

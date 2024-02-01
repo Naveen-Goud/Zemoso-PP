@@ -3,7 +3,7 @@ import React from "react";
 
 interface TypographyProps {
     variant: "h1" | "subtitle1" | "subtitle2";
-    children: string | undefined;
+    children: string;
     textColor: string;
 }
 const Typography = (props: TypographyProps)=>{
